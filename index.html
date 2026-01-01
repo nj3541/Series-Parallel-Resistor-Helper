@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Series / Parallel Resistor Helper | EEE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Series / Parallel Resistor Helper</h1>
+    <p>Compute equivalent resistance quickly while studying circuits.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Resistor values</h2>
+      <p>Enter up to 6 resistor values (ohms). Leave unused boxes empty.</p>
+
+      <div class="grid">
+        <label>R1 (Ω)
+          <input type="number" id="r1" step="0.01" placeholder="e.g. 10" />
+        </label>
+        <label>R2 (Ω)
+          <input type="number" id="r2" step="0.01" placeholder="e.g. 20" />
+        </label>
+        <label>R3 (Ω)
+          <input type="number" id="r3" step="0.01" placeholder="optional" />
+        </label>
+        <label>R4 (Ω)
+          <input type="number" id="r4" step="0.01" placeholder="optional" />
+        </label>
+        <label>R5 (Ω)
+          <input type="number" id="r5" step="0.01" placeholder="optional" />
+        </label>
+        <label>R6 (Ω)
+          <input type="number" id="r6" step="0.01" placeholder="optional" />
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="calcBtn">Calculate</button>
+        <button id="clearBtn" class="ghost">Clear</button>
+      </div>
+      <p class="hint">
+        Series: R_eq = R1 + R2 + ...  |  Parallel: 1/R_eq = 1/R1 + 1/R2 + ...
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+      <ul id="results" class="results"></ul>
+    </section>
+
+    <section class="card">
+      <h2>Quick notes</h2>
+      <ul>
+        <li>Series resistors increase total resistance (current is same through all).</li>
+        <li>Parallel resistors decrease total resistance (voltage is same across all).</li>
+        <li>Use this as a quick check when solving network problems.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2026 Threesa Nayana Joseph • EEE mini tool</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
